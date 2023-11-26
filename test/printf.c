@@ -13,17 +13,19 @@ void helper(const char specifier, va_list args, int *count)
 	{
 		case 'c':
 			putchar(va_arg(args, int));
+			(*count)++;
 			break;
 		case 's':
 			*count += printf("%s", va_arg(args, char *)) - 1;
 			break;
 		case '%':
 			putchar('%');
+			(*count)++;
 			break;
 		default:
 			putchar('%');
 			putchar(specifier);
-			(*count)++;
+			(*count)+=2;
 			break;
 	}
 }
@@ -53,10 +55,11 @@ int _printf(const char *format, ...)
 			return (-1);
 		}
 		else
+		{
 			putchar(*format);
-		count++;
+			count++;
+		}
 	}
-	printf("\n");
 	va_end(args);
 	return (count);
 }
