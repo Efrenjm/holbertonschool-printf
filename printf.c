@@ -16,7 +16,7 @@ void helper(const char specifier, va_list args, int *count)
 			(*count)++;
 			break;
 		case 's':
-			*count += printf("%s", va_arg(args, char *)) - 1;
+			*count += printf("%s", va_arg(args, char *));
 			break;
 		case '%':
 			putchar('%');
@@ -25,7 +25,7 @@ void helper(const char specifier, va_list args, int *count)
 		default:
 			putchar('%');
 			putchar(specifier);
-			(*count)+=2;
+			(*count) += 2;
 			break;
 	}
 }
