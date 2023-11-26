@@ -53,10 +53,12 @@ int _printf(const char *format, ...)
 			return (-1);
 		}
 		else
+		{
 			putchar(*format);
+		}
 		count++;
 	}
 	printf("\n");
 	va_end(args);
-	return (count);
+	return (count - 1);
 }
