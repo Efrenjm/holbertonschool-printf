@@ -36,15 +36,17 @@ int _printf(const char *format, ...)
 					count++;
 					break;
 			}
+			count++;
 		}
 		else if (*format == '%' && *(format + 1) == '\0')
 		{
 			return (-1);
 		}
 		else
+		{
 			putchar(*format);
-		count++;
-		format++;
+			count++;
+		}
 	}
 	va_end(args);
 	return (count);
