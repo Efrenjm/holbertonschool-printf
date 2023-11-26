@@ -10,6 +10,9 @@ int _printf(const char *format, ...)
 	int count;
 	va_list args;
 
+	if (format == NULL)
+		return (0);
+
 	va_start(args, format);
 	count = 0;
 	while (*format != '\0')
@@ -39,8 +42,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			putchar(*format);
-			count++;
+			return (0);
 		}
 		format++;
 	}
