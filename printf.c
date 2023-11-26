@@ -10,11 +10,9 @@ int _printf(const char *format, ...)
 	int count;
 	va_list args;
 
-	count = 0;
-
 	if (format == NULL)
-		return (0);
-
+		return (-1);
+	count = 0;
 	va_start(args, format);
 	while (*format != '\0')
 	{
@@ -42,9 +40,7 @@ int _printf(const char *format, ...)
 			}
 		}
 		else if (*format == '%' && *(format + 1) == '\0')
-		{
-			return (0);
-                }
+			return (-1);
 		else
 		{
 			putchar(*format);
