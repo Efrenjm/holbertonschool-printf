@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-	count = 0;
+	count = -1;
 	va_start(args, format);
 	for (; *format != '\0'; format++)
 	{
