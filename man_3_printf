@@ -1,0 +1,44 @@
+_PRINTF 3 "27 November 2023" "Holberton School C - printf"
+
+NAME
+_printf - format and print data
+
+SYNOPSIS
+printf FORMAT [ARGUMENT]...
+
+DESCRIPTION
+Prints ARGUMENT(s) according to FORMAT.
+
+_printf takes an indefinite amount of arguments.
+
+when FORMAT includes format specifiers (beggining with %), arguments following FORMAT
+take the specifier's format and are inserted in the printed string, replacing specifiers.
+
+EXAMPLE:
+_printf("%s", string);
+
+In the example, the value of [string] will be inserted in place of %s in the first
+argument's string.
+
+CONVERSION SPECIFIERS:
+
+- %c
+prints a character
+
+- %s
+prints a string
+
+- %%
+prints a percentage character
+
+- %d
+prints a number in base 10
+
+- %i
+prints an integer
+
+SEE ALSO
+printf (3)
+
+AUTHOR
+Augusto Chi and Efren Jimenez
