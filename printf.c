@@ -22,6 +22,12 @@ void helper(const char specifier, va_list args, int *count)
 			putchar('%');
 			(*count)++;
 			break;
+		case 'd':
+			*count += printf("%d", va_arg(args, int));
+			break;
+		case 'i':
+			*count += printf("%i", va_arg(args, int));
+			break;
 		default:
 			putchar('%');
 			putchar(specifier);
