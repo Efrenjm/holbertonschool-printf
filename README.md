@@ -1,7 +1,7 @@
-# printf function
+# _printf
 
-Project by:
+## Authors:
 
-Efrén Jiménez Mukul
+* Efrén Jiménez Mukul <[Efrenjm](https://github.com/Efrenjm)>
 
-Augusto
+* Augusto Chi <[Agenc0](https://github.com/Agenc0)>
